@@ -9,7 +9,7 @@ int main() {
 
     EanValidator validator;
 
-    std::vector<std::string> input = {"12345678", " v "};
+    std::vector<std::string> input = {"3666239062713", "3666239062714", "6291041500213"};
     EanValidationResult result = validator.validateEans(input);
 
     std::cout << result.valid << " " << result.invalid << std::endl;
