@@ -2,8 +2,7 @@
 
 #include "EanValidator.hpp"
 
-
-TEST(SolutionTest, basic)
+TEST(EanValidationTest, basic)
 {
     EanValidator validator;
     
