@@ -87,8 +87,11 @@ bool EanValidator::validateEanChecksum(const std::string & ean) const
     int nearestGreaterTen = (sum + 10) / 10;
     nearestGreaterTen *= 10;
     
-    int calculatedChecksum = nearestGreaterTen - sum;
+    int calculatedChecksum = ((nearestGreaterTen - sum) + 10) % 10;
+
     std::cout << "nearestGreaterTen: " << nearestGreaterTen << "Checksum: " << calculatedChecksum << std::endl;
+
+
 
     return calculatedChecksum == checkDigit;
 }
